@@ -19,9 +19,9 @@ An Excel project to determine why customer churn happens, when customers stop do
 
 [Data Analysis](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/edit/main/README.md#data-anlysis)
 
-[Recommendations](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/edit/main/README.md#recommendations)
-
 [Business Value of the Analysis](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/edit/main/README.md#-final-business-value-of-the-analysis)
+
+[Recommendations](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/edit/main/README.md#recommendations)
 
 [Conclusion](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/edit/main/README.md#-conclusion)
 
@@ -60,11 +60,11 @@ To know the percentage of customers that left the bank.
 This helps management understand the severity of customer loss.
 ________________________________________
 **Excel Formula:**
-=COUNTIF(M:M,1)/COUNTA(A:A)
+```=COUNTIF(M:M,1)/COUNTA(A:A)```
 
  **Explanation:**
--	COUNTIF(M:M,1) → counts customers who exited
--	COUNTA(A:A) → counts total customers
+-	```COUNTIF(M:M,1)``` → counts customers who exited
+-	```COUNTA(A:A)``` → counts total customers
 -	Result = churn percentage
 
  	**2️ Identify Which Geography Has the Highest Churn**
@@ -114,7 +114,7 @@ Values	Exited (Sum)
 ________________________________________
 **Optional Formula:**
 
-=COUNTIFS(E:E,"Female",M:M,1)
+```=COUNTIFS(E:E,"Female",M:M,1)```
 
 **Explanation:**
 Counts females who exited.
@@ -128,7 +128,7 @@ Different age groups have different banking behaviors.
 ________________________________________
 **Step 1: Create Age Groups**
 Formula:
-=IF(F2<30,"Young",IF(F2<50,"Middle Age","Senior"))
+```=IF(F2<30,"Young",IF(F2<50,"Middle Age","Senior"))```
 ________________________________________
 **Step 2: Use Pivot Table**
 Rows	Age Group
@@ -149,13 +149,13 @@ Helps measure customer engagement effectiveness.
 ________________________________________
 
 **Formula:**
-=COUNTIFS(K:K,1,M:M,1)
+```=COUNTIFS(K:K,1,M:M,1)```
 
 **Explanation:**
 Counts active members who churned.
 ________________________________________
 **Compare With:**
-=COUNTIFS(K:K,0,M:M,1)
+```=COUNTIFS(K:K,0,M:M,1)```
 
 👉 This shows inactive customers who churned.
 ________________________________________
@@ -188,11 +188,11 @@ Financial risk can influence customer behavior.
 ________________________________________
 **Formula:**
 Average Credit Score:
-=AVERAGE(C:C)
+```=AVERAGE(C:C)```
 ________________________________________
 **Optional Analysis:**
 Create score bands:
-=IF(C2<500,"Poor",IF(C2<700,"Good","Excellent"))
+```=IF(C2<500,"Poor",IF(C2<700,"Good","Excellent"))```
 Then build Pivot Table.
 ________________________________________
 **8️ Analyze Customer Balance and Salary**
@@ -208,7 +208,7 @@ ________________________________________
 =AVERAGE(L:L)
 ________________________________________
 **High Balance Category:**
-=IF(H2>100000,"High Balance","Normal Balance")
+```=IF(H2>100000,"High Balance","Normal Balance")```
 ## Data Source
 This dataset is gotten from [Maven Analytics](https://app.mavenanalytics.io/datasets?search=ch) website, design specifically for practice purpose. It is presented in Excel file with 1 table, comprising of 15,863,431,470 rows and total of 13 columns respectively. The dataset includes key attributes essential for a comprehensive analysis, such as:
 
@@ -237,7 +237,7 @@ Several new columns were added to enhance the dataset and enable more detailed a
 
 **1️ Churn Flag Column**
 Formula
-=IF(M2=1,"Churned","Retained")
+```=IF(M2=1,"Churned","Retained")```
 Where:
 -	1 = Customer left the bank 
 -	0 = Customer stayed 
@@ -277,6 +277,7 @@ ________________________________________
 **2️ Age Group Column**
 
 **Formula**
+
 =IF(F2<30,"Young",
 IF(F2<50,"Middle Age",
 "Senior"))
@@ -341,6 +342,7 @@ The bank should investigate why senior customers are leaving at a higher rate.
 **3️ Balance Category Column**
 
 **Formula**
+
 =IF(H2=0,"Zero Balance",
 IF(H2<50000,"Low Balance",
 "High Balance"))
@@ -399,17 +401,13 @@ Before analysis, data must be cleaned to ensure accuracy.
 ________________________________________
 **Cleaning Goals:**
 
-**Task**	**Purpose**
-
-Remove duplicates	Prevent double counting
-
-Handle missing values	 Improve accuracy
-
-Standardize text	 Ensure consistency
-
-Validate data types	 Avoid calculation errors
-
-Detect outliers	 Improve reliability
+| Task                | Purpose                      |
+|---------------------|------------------------------|
+| Remove Duplicates   | Prevent double counting      |
+| Handle Missing Values | Improve accuracy           |
+| Standardize Text    | Ensure consistency           |
+| Validate Data Types | Avoid calculation errors     |
+| Detect Outliers     | Improve reliability          |
 ________________________________________
 ## 🔧 DATA CLEANING FORMULAS
 ________________________________________
@@ -419,15 +417,15 @@ ________________________________________
 ________________________________________
 **Remove Extra Spaces**
 
-=TRIM(D2)
+```=TRIM(D2)```
 ________________________________________
 **Convert Text to Uppercase**
 
-=UPPER(E2)
+```=UPPER(E2)```
 ________________________________________
 **Detect Duplicate Customer IDs**
 
-=IF(COUNTIF(A:A,A2)>1,"Duplicate","Unique")
+```=IF(COUNTIF(A:A,A2)>1,"Duplicate","Unique")```
 ________________________________________
 **📊 KPI DASHBOARD OBJECTIVE**
 
@@ -437,20 +435,15 @@ The dashboard helps management:
 -	Make strategic decisions quickly
 ________________________________________
 **📈 Recommended Dashboard KPIs**
+| KPI                | Formula                               |
+|--------------------|---------------------------------------|
+| Total Customers    | =COUNTA(A:A)                          |
+| Churned Customers  | =COUNTIF(M:M,1)                       |
+| Churn Rate         | =COUNTIF(M:M,1)/COUNTA(A:A)           |
+| Active Members     | =COUNTIF(K:K,1)                       |
+| Avg Balance        | =AVERAGE(H:H)                         |
+| Avg Credit Score   | =AVERAGE(C:C)                         |
 
-**KPI	Formula**
-
-Total Customers	=COUNTA(A:A)
-
-Churned Customers	=COUNTIF(M:M,1)
-
-Churn Rate	=COUNTIF(M:M,1)/COUNTA(A:A)
-
-Active Members	=COUNTIF(K:K,1)
-
-Avg Balance	=AVERAGE(H:H)
-
-Avg Credit Score	=AVERAGE(C:C)
 ________________________________________
 ### 🧠 FINAL BUSINESS VALUE OF THE ANALYSIS
 
@@ -475,101 +468,371 @@ This chart shows the number of customers who have churned (left the bank) across
 | Senior     | 297               | 14.6%            |
 | **Total**  | **2,038**         | **100%**         |
 
-Key Insights for the Board
-1. Middle-Aged Customers Drive the Majority of Churn
+**Key Insights for the Board**
 
-The most significant finding is that Middle-Aged customers account for over 70% of all customer losses.
+**1. Middle-Aged Customers Drive the Majority of Churn**
 
-1,432 customers churned in this segment.
-This is almost 5 times higher than either the Young or Senior segments.
-The bank's customer retention challenge is concentrated within this age category.
+The most significant finding is that **Middle-Aged customers account for over 70% of all customer losses.**
+- 1,432 customers churned in this segment.
+- This is almost **5 times higher** than either the Young or Senior segments.
+- The bank's customer retention challenge is concentrated within this age category.
 
-Business Implication:
+**Business Implication:**
 Any reduction in churn among middle-aged customers will generate the greatest impact on customer retention and revenue preservation.
 
-2. Young and Senior Customers Show Similar Churn Levels
+**2. Young and Senior Customers Show Similar Churn Levels**
 
 The Young (309) and Senior (297) segments exhibit nearly identical churn volumes.
 
-Difference between the two groups is only 12 customers.
-Neither group appears to be a major contributor to overall churn.
+- Difference between the two groups is only 12 customers.
+- Neither group appears to be a major contributor to overall churn.
 
-Business Implication:
+**Business Implication:**
 Retention efforts should remain in place, but they should not be the primary focus compared to the middle-aged segment.
 
-3. Potential Risk to Revenue
+**3. Potential Risk to Revenue**
 
 Middle-aged customers are often:
 
-High-income earners
-Mortgage holders
-Credit card users
-Investors
-Multi-product customers
+- High-income earners
+- Mortgage holders
+- Credit card users
+- Investors
+- Multi-product customers
 
 Losing customers from this segment may have a disproportionate effect on:
 
-Revenue
-Cross-selling opportunities
-Customer Lifetime Value (CLV)
+- Revenue
+- Cross-selling opportunities
+- Customer Lifetime Value (CLV)
 
-Business Implication:
+**Business Implication:**
 The financial impact of churn may be significantly higher than the customer count alone suggests.
 
-Possible Causes to Investigate
+**Possible Causes to Investigate**
 
-The chart identifies where churn is occurring, but not why.
+The chart identifies **where churn is occurring,** but not**why.**
 
 The next analysis should examine whether middle-aged churners have common characteristics such as:
 
-Low customer satisfaction
-Poor credit scores
-High account balances
-Limited product usage
-Long waiting times
-Lower engagement with digital channels
-Better offers from competitors
-Recommended Actions
-Immediate Priorities
-1. Launch a Middle-Age Retention Program
+- Low customer satisfaction
+- Poor credit scores
+- High account balances
+- Limited product usage
+- Long waiting times
+- Lower engagement with digital channels
+- Better offers from competitors
+
+**Recommended Actions**
+
+**Immediate Priorities**
+
+**1. Launch a Middle-Age Retention Program**
 
 Target customers aged approximately 35–55 with:
 
-Loyalty rewards
-Personalized offers
-Relationship management programs
-Mortgage and investment incentives
-2. Identify High-Value Customers at Risk
+- Loyalty rewards
+- Personalized offers
+- Relationship management programs
+- Mortgage and investment incentives
+
+**2. Identify High-Value Customers at Risk**
 
 Build a churn-risk dashboard that flags:
 
-Declining balances
-Reduced transactions
-Complaints
-Inactive accounts
-3. Conduct Root Cause Analysis
+- Declining balances
+- Reduced transactions
+- Complaints
+- Inactive accounts
+
+**3. Conduct Root Cause Analysis**
 
 Break down churn by:
 
-Geography
-Gender
-Credit Score
-Tenure
-Balance
-Number of Products
+- Geography
+- Gender
+- Credit Score
+- Tenure
+- Balance
+- Number of Products
 
 This will reveal the specific drivers behind the high churn rate.
 
-Board-Level Presentation Statement
+**Board-Level Presentation Statement**
 
 "Customer churn is heavily concentrated among middle-aged customers, who account for approximately 70% of all customer losses. This segment represents the bank's greatest retention risk and likely contains many high-value customers. Strategic retention initiatives focused on this demographic could significantly reduce overall churn and protect future revenue growth."
 
-Suggested Insight Title for Dashboard
+**Suggested Insight Title for Dashboard**
 
-"Middle-Aged Customers Represent 70% of Total Customer Churn – Primary Retention Risk Segment"
+**"Middle-Aged Customers Represent 70% of Total Customer Churn – Primary Retention Risk Segment"**
 
-This is a strong executive-level insight because it immediately highlights where management should focus retention investments for maximum business impact.### Recommendations
+This is a strong executive-level insight because it immediately highlights **where management should focus retention investments for maximum business impact.**
+**Customer Churn by Gender**
+![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Churn%20by%20Gender.png)
 
+**Overview**
+
+This chart illustrates customer churn distribution by gender.
+
+| Gender | Churned Customers | Percentage |
+|--------|------------------:|-----------:|
+| Male   | 1,124             | 55.2%      |
+| Female | 914               | 44.8%      |
+| Total  | 2,038             | 100.0%     |
+
+**Key Findings**
+**1. Male Customers Have the Highest Churn Rate**
+
+Male customers account for **1,124** churned customers, representing approximately **55% of total churn.**
+
+Female customers account for **914 churned customers**, representing approximately **45% of total churn.**
+
+**Board Insight**
+
+While churn affects both genders, male customers are leaving at a higher rate, contributing an additional **210 customer losses** compared to females.
+
+**2. Gender Gap Exists but Is Not Extreme**
+
+The difference between male and female churn is approximately 10 percentage points.
+
+This suggests:
+
+- Churn is not exclusively a male or female issue.
+- Retention challenges exist across both customer groups.
+- However, males appear to be slightly more vulnerable to churn.
+
+**Business Implication**
+
+A gender-specific retention strategy may help improve customer retention, particularly among male customers.
+
+**3. Revenue Risk Assessment**
+
+If male customers hold:
+
+- Higher account balances
+- More loans
+- More investment products
+- More premium banking services
+
+Then the financial impact of male churn may be greater than the customer count indicates.
+
+**Board Recommendation**
+
+Management should assess:
+
+- Average balance by gender
+- Product ownership by gender
+- Revenue contribution by gender
+- Customer Lifetime Value (CLV) by gender
+
+This will determine whether the higher male churn translates into higher revenue loss.
+
+**Strategic Questions for Further Analysis**
+
+The chart identifies who is leaving, but not why they are leaving.
+
+The next phase should investigate:
+
+**Male Customers**
+- Are they concentrated in a specific age group?
+- Do they have lower satisfaction scores?
+- Are they using fewer banking products?
+- Are they more sensitive to fees or interest rates?
+**Female Customers**
+- Are there specific customer segments with elevated churn?
+- Are there service-related factors contributing to attrition?
+
+**Recommended Actions**
+
+**Priority 1: Focus on High-Risk Male Segments**
+
+Identify male customers who exhibit:
+
+- Falling balances
+- Reduced transaction activity
+- Declining product usage
+- Customer complaints
+
+Implement targeted retention campaigns before they exit.
+
+**Priority 2: Segment by Age and Gender**
+
+A powerful next analysis would be:
+| Segment             | Churn Risk |
+|---------------------|------------|
+| Middle-Aged Male    | High       |
+| Young Male          | Medium     |
+| Senior Male         | Low        |
+| Middle-Aged Female  | High       |
+| Young Female        | Medium     |
+| Senior Female       | Low        |
+
+
+This segmentation often reveals the true churn drivers.
+
+**Priority 3: Personalize Retention Strategies**
+
+Instead of a generic retention program:
+
+- Tailor offers to customer needs.
+- Improve engagement through personalized communication.
+- Offer loyalty incentives to at-risk customers.
+**Board-Level Narrative**
+
+"Customer churn is relatively balanced across genders; however, male customers represent 55% of all customer departures compared to 45% for females. While the difference is not substantial enough to indicate a systemic gender issue, it highlights an opportunity to investigate the drivers of churn among male customers. Future retention initiatives should focus on understanding the interaction between gender, age, product usage, and customer value to reduce attrition and protect revenue."
+
+**Dashboard Insight Statement**
+
+**"Male customers account for 55% of total churn, indicating a moderate but noteworthy retention risk compared to female customers."**
+
+**Important Analyst Note**
+
+Before concluding that men are more likely to churn, verify the overall customer base composition. For example:
+
+- If 70% of all customers are male, then a 55% churn share actually indicates **better retention among males.**
+- If customers are split 50/50 by gender, then males are genuinely churning at a higher rate.
+
+**Customer Churn by Geography**
+
+![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Churn%20by%20Geography.png)
+
+**Overview**
+
+This chart shows the distribution of churned customers across four geographic categories.
+| Geography | Churned Customers | Percentage of Total Churn |
+| --------- | ----------------- | ------------------------- |
+| France    | 686               | 33.7%                     |
+| Spain     | 529               | 26.0%                     |
+| Germany   | 505               | 24.8%                     |
+| French    | 318               | 15.6%                     |
+| **Total** | **2,038**         | **100%**                  |
+
+
+**Key Findings**
+
+**1. France Records the Highest Customer Churn**
+
+France accounts for **686 churned customers**, representing approximately **34% of all customer losses.**
+
+This makes France the largest contributor to overall churn among the geographic segments analyzed.
+
+**Board Insight**
+
+More than one-third of all customer departures originate from the French market, indicating that customer retention challenges are most pronounced in this region.
+
+**2. Spain and Germany Show Similar Churn Patterns**
+
+Spain and Germany contribute:
+
+- Spain: 529 churned customers
+- Germany: 505 churned customers
+
+The difference between these two markets is minimal.
+
+**Business Implication**
+
+This suggests that customer attrition is not isolated to one market but may be driven by similar competitive, service, or product-related factors across these regions.
+
+**3. Potential Data Quality Concern**
+
+The chart contains both "France" and "French" as separate categories.
+
+This is likely a data quality issue because:
+
+France refers to a country.
+French is a nationality or language, not a geographic location.
+Analyst Recommendation
+
+Before presenting final findings, validate the source data to determine whether:
+
+"French" should be merged with "France", or
+It represents a different category entered incorrectly.
+
+If merged:
+
+Geography	Churned Customers
+France (Combined)	1,004
+Spain	529
+Germany	505
+
+This would mean France contributes nearly 50% of total churn, significantly strengthening the business case for intervention in that market.
+
+Strategic Business Implications
+Customer Retention Risk
+
+The concentration of churn in France suggests possible issues such as:
+
+Competitive pressure
+Customer dissatisfaction
+Product-market fit challenges
+Pricing concerns
+Service quality differences
+
+These factors should be investigated through deeper segmentation.
+
+Revenue Impact
+
+If French customers hold:
+
+Larger balances
+More investment products
+More loans
+Higher-value accounts
+
+Then the financial impact of churn may exceed what customer counts alone indicate.
+
+Board Recommendation
+
+Analyze:
+
+Average account balance by geography
+Revenue contribution by geography
+Product ownership by geography
+Customer lifetime value by geography
+Recommended Next-Level Analysis
+
+To identify the root cause of churn, cross-analyze geography with:
+
+Age Group
+Which age segments are driving churn in France?
+Gender
+Are male or female customers more likely to leave in specific regions?
+Credit Score
+Is churn concentrated among high-risk customers?
+Balance
+Are high-balance customers leaving?
+Number of Products
+Do customers with fewer products churn more frequently?
+Actions Recommended to Management
+Immediate Priority
+
+Conduct a focused churn investigation within the French market.
+
+Medium-Term Priority
+
+Develop region-specific retention campaigns, including:
+
+Loyalty programs
+Product bundling
+Personalized offers
+Customer engagement initiatives
+Long-Term Priority
+
+Build a geographic churn monitoring dashboard to identify emerging retention risks before they escalate.
+
+Board-Level Narrative
+
+"Customer churn is geographically concentrated, with France accounting for the highest number of customer departures at 686 customers, representing approximately one-third of total churn. Spain and Germany follow closely behind. However, a potential data quality issue exists with the separate classification of 'France' and 'French', which may understate the true churn concentration in the French market. Management should prioritize validation of geographic data and focus retention efforts on the regions contributing the highest customer losses."
+
+Executive Dashboard Insight
+
+"France is the largest contributor to customer churn, generating 34% of all customer departures and representing the bank's most significant geographic retention challenge."
+
+Data Analyst Observation
+
+Before presenting this chart to executives, I would recommend correcting the 'French' vs. 'France' categorization. Board-level decisions should be based on standardized geographic data to avoid misleading conclusions and ensure accurate targeting of retention strategies.
+
+## Recommendations ##
 Based on the findings from the analysis, the following recommendations are proposed:
 
 **1. Prioritize Retention of Middle-Aged Customers**
