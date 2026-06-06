@@ -1006,6 +1006,160 @@ For example:
 
 This will confirm whether customers with one product truly have the highest propensity to churn or whether they simply represent the largest customer segment.
 
+**Customer Distribution by Gender**
+
+![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Frequent%20Churn.png)
+
+**Overview**
+
+This chart shows the total customer population by gender.
+
+| Gender              | Customers | Percentage |
+| ------------------- | --------- | ---------- |
+| Male                | 5,456     | 54.6%      |
+| Female              | 4,541     | 45.4%      |
+| **Total Customers** | **9,997** | **100%**   |
+
+**Key Findings**
+
+**1. The Customer Base Is Relatively Balanced**
+
+The bank serves:
+
+- **5,456 Male customers (54.6%)**
+- **4,541 Female customers (45.4%)**
+
+The difference is approximately **915 customers**, indicating a fairly balanced customer portfolio.
+
+**Board Insight**
+
+The bank does not appear to be overly dependent on a single gender segment, which reduces concentration risk and provides opportunities for balanced growth.
+
+**2. Male Customers Represent the Largest Customer Segment**
+
+Male customers account for slightly more than half of the customer base.
+
+**Business Implication**
+
+Since male customers constitute the largest segment:
+
+- They naturally contribute more to overall revenue.
+- They may also contribute more to total churn volume.
+
+However, volume alone should not be confused with risk.
+
+**3. Comparing Customer Base vs Churn Data Reveals a Critical Insight**
+
+From the previous churn analysis:
+
+| Gender | Total Customers | Churned Customers |
+| ------ | --------------- | ----------------- |
+| Male   | 5,456           | 1,124             |
+| Female | 4,541           | 914               |
+
+
+Let's calculate the actual churn rates:
+
+**Male Churn Rate**
+
+5456
+1124
+	​
+
+×100
+
+≈ 20.6%
+
+**Female Churn Rate**
+
+4541
+914
+	​
+
+×100
+
+≈ 20.1%
+
+**Most Important Board Finding**
+
+Although more male customers churned than female customers, the actual churn rates are nearly identical:
+
+| Gender | Churn Rate |
+| ------ | ---------- |
+| Male   | 20.6%      |
+| Female | 20.1%      |
+
+
+Difference:
+
+**Only 0.5 percentage points**
+
+**Executive Interpretation**
+
+The higher number of male churners is largely explained by the fact that the bank has more male customers overall.
+
+This means:
+
+✅ Gender is **not a major driver of churn**
+
+✅ Churn affects both genders almost equally
+
+✅ Retention efforts should focus on stronger drivers such as:
+
+- Age Group
+- Number of Products
+- Account Balance
+- Credit Score
+- Geography
+
+**Strategic Implications**
+
+**Focus Resources Where They Matter Most**
+
+Previous analyses identified stronger churn signals:
+
+**Age Group**
+- Middle-aged customers account for over 70% of churn.
+
+**Product Ownership**
+- Single-product customers account for nearly 70% of churn.
+
+These factors are likely much stronger predictors of churn than gender.
+
+**Recommended Actions**
+**Low Priority: Gender-Based Retention**
+
+No evidence suggests the need for separate retention strategies for males and females.
+
+**High Priority: Behavioral Segmentation**
+
+Target customers based on:
+
+- Product usage
+- Engagement levels
+- Customer value
+- Geographic location
+ -Age profile
+
+These variables are more likely to generate measurable retention improvements.
+
+**Board-Level Narrative**
+
+"The bank's customer base is relatively balanced, with males representing 54.6% of customers and females accounting for 45.4%. While male customers generate a slightly higher number of churn cases, further analysis shows that male and female churn rates are nearly identical at approximately 20%. This indicates that gender is not a significant driver of customer attrition. Management should therefore prioritize retention initiatives around stronger predictors of churn, particularly product ownership, age segment, and geographic location."
+
+**Executive Dashboard Insight**
+
+**"Customer churn is evenly distributed across genders, with both male and female customers exhibiting churn rates of approximately 20%. Gender is not a primary driver of attrition."**
+
+**Analyst Recommendation**
+
+For the board presentation, use this chart alongside the churn-by-gender chart. Together they demonstrate an important analytical principle:
+
+  **Raw churn counts can be misleading; churn rates provide the true measure of customer risk.**
+
+This strengthens the credibility of your analysis and shows executive-level thinking.
+
+
 ![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Dashboard.png)
 
 ## Recommendations ##
