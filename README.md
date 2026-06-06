@@ -567,7 +567,9 @@ This will reveal the specific drivers behind the high churn rate.
 **"Middle-Aged Customers Represent 70% of Total Customer Churn – Primary Retention Risk Segment"**
 
 This is a strong executive-level insight because it immediately highlights **where management should focus retention investments for maximum business impact.**
+
 **Customer Churn by Gender**
+
 ![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Churn%20by%20Gender.png)
 
 **Overview**
@@ -698,141 +700,316 @@ Before concluding that men are more likely to churn, verify the overall customer
 
 **Overview**
 
-This chart shows the distribution of churned customers across four geographic categories.
-| Geography | Churned Customers | Percentage of Total Churn |
-| --------- | ----------------- | ------------------------- |
-| France    | 686               | 33.7%                     |
-| Spain     | 529               | 26.0%                     |
-| Germany   | 505               | 24.8%                     |
-| French    | 318               | 15.6%                     |
-| **Total** | **2,038**         | **100%**                  |
+This chart presents the distribution of churned customers across the bank's three geographic markets after correcting the previous data quality issue and consolidating the French customer records.
+
+| Geography | Churned Customers | % of Total Churn |
+| --------- | ----------------: | ---------------: |
+| France    |             1,004 |            49.3% |
+| Spain     |               529 |            26.0% |
+| Germany   |               505 |            24.8% |
+| **Total** |         **2,038** |         **100%** |
 
 
 **Key Findings**
 
-**1. France Records the Highest Customer Churn**
+**1. France Is the Largest Contributor to Customer Churn**
 
-France accounts for **686 churned customers**, representing approximately **34% of all customer losses.**
+France accounts for **1,004 churned customers,** representing approximately **49% of all customer losses.**
 
-This makes France the largest contributor to overall churn among the geographic segments analyzed.
+This means:
+
+- Nearly **1 out of every 2 churned customers** comes from France.
+- France's churn volume is almost double that of Spain and Germany individually.
 
 **Board Insight**
 
-More than one-third of all customer departures originate from the French market, indicating that customer retention challenges are most pronounced in this region.
+France represents the bank's most significant retention challenge and should be considered the highest-priority market for churn reduction initiatives.
 
-**2. Spain and Germany Show Similar Churn Patterns**
+**2. Spain and Germany Exhibit Similar Churn Levels**
 
-Spain and Germany contribute:
+The difference between Spain and Germany is relatively small:
 
-- Spain: 529 churned customers
-- Germany: 505 churned customers
+| Country | Churned Customers |
+| ------- | ----------------: |
+| Spain   |               529 |
+| Germany |               505 |
 
-The difference between these two markets is minimal.
+
+The gap is only **24 customers.**
 
 **Business Implication**
 
-This suggests that customer attrition is not isolated to one market but may be driven by similar competitive, service, or product-related factors across these regions.
+This suggests that customer attrition in these markets is relatively stable and may be influenced by similar market conditions or customer behaviors.
 
-**3. Potential Data Quality Concern**
+**3. Churn Is Highly Concentrated in One Market**
 
-The chart contains both "France" and "French" as separate categories.
+France contributes nearly half of all churned customers, while Spain and Germany together account for the remaining half.
 
-This is likely a data quality issue because:
+**Executive Concern**
 
-France refers to a country.
-French is a nationality or language, not a geographic location.
-Analyst Recommendation
+Such concentration creates:
 
-Before presenting final findings, validate the source data to determine whether:
+- Revenue risk
+- Market share risk
+- Increased customer acquisition costs
+- Reduced profitability in the French market
 
-"French" should be merged with "France", or
-It represents a different category entered incorrectly.
+If left unaddressed, continued churn in France could significantly impact overall business growth.
 
-If merged:
+**Business Impact**
+**Revenue Impact**
 
-Geography	Churned Customers
-France (Combined)	1,004
-Spain	529
-Germany	505
+The high concentration of churn in France may indicate the loss of:
 
-This would mean France contributes nearly 50% of total churn, significantly strengthening the business case for intervention in that market.
+- High-value customers
+- Long-term relationships
+- Cross-selling opportunities
+- Future revenue streams
+- Board Consideration
 
-Strategic Business Implications
-Customer Retention Risk
+Management should quantify:
 
-The concentration of churn in France suggests possible issues such as:
+- Revenue lost from churned French customers
+- Average account balances by country
+- Customer Lifetime Value (CLV) by geography
 
-Competitive pressure
-Customer dissatisfaction
-Product-market fit challenges
-Pricing concerns
-Service quality differences
+This will reveal the true financial impact beyond customer counts.
 
-These factors should be investigated through deeper segmentation.
+**Possible Causes to Investigate**
 
-Revenue Impact
+The chart identifies **where churn is occurring**, but not **why**.
 
-If French customers hold:
+Potential factors include:
 
-Larger balances
-More investment products
-More loans
-Higher-value accounts
+**Market Competition**
 
-Then the financial impact of churn may exceed what customer counts alone indicate.
+Customers may be switching to competitors offering better products or pricing.
 
-Board Recommendation
+**Customer Experience**
 
-Analyze:
+Service quality issues could be affecting customer satisfaction.
 
-Average account balance by geography
-Revenue contribution by geography
-Product ownership by geography
-Customer lifetime value by geography
-Recommended Next-Level Analysis
+**Product Relevance**
 
-To identify the root cause of churn, cross-analyze geography with:
+Products may not fully meet customer needs in the French market.
 
-Age Group
-Which age segments are driving churn in France?
-Gender
-Are male or female customers more likely to leave in specific regions?
-Credit Score
-Is churn concentrated among high-risk customers?
-Balance
-Are high-balance customers leaving?
-Number of Products
-Do customers with fewer products churn more frequently?
-Actions Recommended to Management
-Immediate Priority
+**Pricing and Fees**
 
-Conduct a focused churn investigation within the French market.
+Customers may perceive banking costs as too high compared to alternatives.
 
-Medium-Term Priority
+**Recommended Actions**
+**Priority 1: Launch a France-Focused Retention Strategy**
 
-Develop region-specific retention campaigns, including:
+Since almost half of all churn originates from France:
 
-Loyalty programs
-Product bundling
-Personalized offers
-Customer engagement initiatives
-Long-Term Priority
+- Conduct customer satisfaction surveys
+- Analyze churn reasons
+- Offer targeted retention incentives
+- Strengthen customer engagement programs
+**Expected Outcome**
 
-Build a geographic churn monitoring dashboard to identify emerging retention risks before they escalate.
+A reduction in churn within France would produce the largest overall improvement in retention.
 
-Board-Level Narrative
+**Priority 2: Segment French Customers Further**
 
-"Customer churn is geographically concentrated, with France accounting for the highest number of customer departures at 686 customers, representing approximately one-third of total churn. Spain and Germany follow closely behind. However, a potential data quality issue exists with the separate classification of 'France' and 'French', which may understate the true churn concentration in the French market. Management should prioritize validation of geographic data and focus retention efforts on the regions contributing the highest customer losses."
+Analyze churn within France by:
 
-Executive Dashboard Insight
+- Age Group
+- Gender
+- Credit Score
+- Balance Category
+- Number of Products
 
-"France is the largest contributor to customer churn, generating 34% of all customer departures and representing the bank's most significant geographic retention challenge."
+This will identify the specific customer profiles driving churn.
 
-Data Analyst Observation
+**Priority 3: Implement Geographic Churn Monitoring**
 
-Before presenting this chart to executives, I would recommend correcting the 'French' vs. 'France' categorization. Board-level decisions should be based on standardized geographic data to avoid misleading conclusions and ensure accurate targeting of retention strategies.
+Develop a dashboard that tracks:
+
+- Churn rate by country
+- Customer acquisition by country
+- Retention trends over time
+
+This allows management to detect problems before they become critical.
+
+**Board-Level Narrative**
+
+"Customer churn is heavily concentrated in the French market, which accounts for approximately 49% of all customer departures. This level of concentration indicates that France represents the bank's most significant retention risk and warrants immediate management attention. While Spain and Germany exhibit similar churn patterns, reducing churn in France offers the greatest opportunity to improve overall customer retention, protect revenue, and enhance long-term profitability."
+
+**Executive Dashboard Insight**
+
+**"France accounts for nearly half of all customer churn, making it the bank's highest-priority market for retention and customer engagement initiatives."**
+
+**Strategic Conclusion**
+
+Across all analyses completed so far, the strongest churn indicators are:
+
+**1. Middle-Aged Customers** (70% of churn)
+**2. Single-Product Customers** (69% of churn)
+**3. French Market Customers** (49% of churn)
+
+These three segments should be the primary focus of the bank's customer retention strategy.
+
+**Customer Churn by Number of Products**
+
+![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Churn%20by%20Number%20of%20Product.png)
+
+**Overview**
+
+This chart shows the number of churned customers based on the number of banking products they held before leaving.
+
+Number of Products	Churned Customers	Percentage of Total Churn
+
+| Number of Products | Churned Customers | Percentage of Total Churn |
+| ------------------ | ----------------- | ------------------------- |
+| 1 Product          | 1,410             | 69.2%                     |
+| 2 Products         | 348               | 17.1%                     |
+| 3 Products         | 220               | 10.8%                     |
+| 4 Products         | 60                | 2.9%                      |
+| **Total**          | **2,038**         | **100%**                  |
+
+
+**Key Findings**
+
+**1. Customers with Only One Product Are the Highest Churn Risk**
+
+The most striking finding is that customers holding only one product account for 1,410 churned customers, representing nearly 70% of total churn.
+
+This means:
+
+- Nearly 7 out of every 10 customers who left the bank had only one product.
+- Single-product customers are significantly more likely to disengage from the bank.
+
+**Board Insight**
+
+Customers with limited engagement are the bank's most vulnerable customer segment.
+
+**2. Churn Decreases as Product Adoption Increases**
+
+The data shows a clear trend:
+
+| Products Held | Churn Volume |
+| ------------- | ------------ |
+| 1 Product     | 1,410        |
+| 2 Products    | 348          |
+| 3 Products    | 220          |
+| 4 Products    | 60           |
+
+
+As the number of products increases, churn decreases substantially.
+
+**Business Interpretation**
+
+Customers with multiple banking relationships tend to be:
+
+- More engaged
+- More loyal
+- More dependent on the bank's services
+- Less likely to switch to competitors
+
+This demonstrates a strong relationship between product penetration and customer retention.
+
+**3. Multi-Product Customers Are More Loyal**
+
+Customers with:
+
+- Savings accounts
+- Credit cards
+- Loans
+- Investment products
+
+are less likely to leave because switching becomes more complicated and costly.
+
+**Strategic Implication**
+
+Increasing the number of products per customer may be one of the most effective churn-reduction strategies available to the bank.
+
+**Revenue Risk Assessment**
+
+The high churn among single-product customers creates two concerns:
+
+Immediate Risk
+
+Loss of existing customers and revenue.
+
+**Long-Term Risk**
+
+Missed cross-selling opportunities.
+
+Every single-product customer who leaves represents a lost opportunity to sell:
+
+- Credit cards
+- Personal loans
+- Mortgages
+- Investment products
+- Insurance services
+
+**Recommended Actions**
+
+**Priority 1: Increase Product Penetration**
+
+Launch cross-selling campaigns targeting customers with only one product.
+
+Examples:
+
+- Savings + Credit Card bundles
+- Current Account + Loan offers
+- Investment Account promotions
+
+**Expected Outcome**
+
+Customers become more integrated into the bank's ecosystem, reducing churn risk.
+
+**Priority 2: Create an Early Warning System**
+
+Monitor single-product customers for:
+
+- Declining balances
+- Reduced transactions
+- Inactivity
+- Service complaints
+
+These customers should be flagged as high-risk.
+
+**Priority 3: Customer Journey Analysis**
+
+Investigate why customers fail to adopt additional products:
+
+- Lack of awareness?
+- Poor onboarding?
+- Unattractive offers?
+- Customer experience issues?
+
+Understanding this behavior can improve both retention and revenue growth.
+
+**Strategic Insight for the Board**
+
+"Customer churn is heavily concentrated among customers holding only one banking product, accounting for approximately 70% of all customer departures. The analysis reveals a strong inverse relationship between product ownership and churn, indicating that customers become significantly more loyal as they adopt additional products. Expanding product penetration should therefore be considered a key strategic lever for improving customer retention and increasing customer lifetime value."
+
+**Executive Dashboard Insight**
+
+**"Single-product customers represent 69% of all churned customers, making low product adoption the strongest indicator of customer attrition."**
+
+**Important Analyst Note**
+
+For a more robust board presentation, calculate the actual churn rate by product count, not just the number of churned customers.
+
+For example:
+
+| Products | Total Customers | Churned Customers | Churn Rate |
+| -------- | --------------- | ----------------- | ---------- |
+| 1        | ?               | 1,410             | ?          |
+| 2        | ?               | 348               | ?          |
+| 3        | ?               | 220               | ?          |
+| 4        | ?               | 60                | ?          |
+
+
+This will confirm whether customers with one product truly have the highest propensity to churn or whether they simply represent the largest customer segment.
+
+![](https://github.com/GideonAdon/Customer-Churn-Analysis-For-a-Bank/blob/main/Dashboard.png)
 
 ## Recommendations ##
+
 Based on the findings from the analysis, the following recommendations are proposed:
 
 **1. Prioritize Retention of Middle-Aged Customers**
@@ -840,9 +1017,9 @@ Based on the findings from the analysis, the following recommendations are propo
 Middle-aged customers account for the largest share of churn.
 
 **Actions:**
-Develop loyalty programs targeted at customers aged 35–55.
-Offer personalized financial products and incentives.
-Improve customer engagement through regular relationship management.
+- Develop loyalty programs targeted at customers aged 35–55.
+- Offer personalized financial products and incentives.
+- Improve customer engagement through regular relationship management.
 
 **Expected Outcome:**
 
@@ -853,10 +1030,11 @@ Reduction in churn among the highest-risk customer segment.
 Customers with only one product account for nearly 70% of total churn.
 
 **Actions:**
-Implement cross-selling campaigns.
-Bundle products such as savings accounts, credit cards, loans, and investments.
-Offer incentives for customers who adopt multiple products.
-Expected Outcome:
+ - Implement cross-selling campaigns.
+- Bundle products such as savings accounts, credit cards, loans, and investments.
+- Offer incentives for customers who adopt multiple products.
+
+**Expected Outcome:**
 
 Higher customer loyalty and lower churn rates.
 
@@ -865,10 +1043,11 @@ Higher customer loyalty and lower churn rates.
 France (and potentially the "French" category after data correction) contributes the largest number of churned customers.
 
 **Actions:**
-Conduct regional customer satisfaction surveys.
-Analyze competitor activity in high-churn markets.
-Develop location-specific retention campaigns.
-Expected Outcome:
+- Conduct regional customer satisfaction surveys.
+- Analyze competitor activity in high-churn markets.
+- Develop location-specific retention campaigns.
+
+**Expected Outcome:**
 
 Improved customer retention in the most affected regions.
 
@@ -880,12 +1059,13 @@ Many churned customers show warning signs before leaving.
 
 Monitor:
 
-Declining account balances
-Reduced transaction frequency
-Customer complaints
-Product cancellations
-Reduced digital engagement
-Expected Outcome:
+- Declining account balances
+- Reduced transaction frequency
+- Customer complaints
+- Product cancellations
+- Reduced digital engagement
+
+ **Expected Outcome:**
 
 Early intervention before customers decide to leave.
 
@@ -894,10 +1074,11 @@ Early intervention before customers decide to leave.
 The presence of both "France" and "French" indicates potential data quality issues.
 
 **Actions:**
-Standardize geographic categories.
-Establish data validation rules.
-Regularly audit customer data.
-Expected Outcome:
+- Standardize geographic categories.
+- Establish data validation rules.
+- Regularly audit customer data.
+
+**Expected Outcome:**
 
 More accurate reporting and better decision-making.
 
@@ -906,13 +1087,14 @@ More accurate reporting and better decision-making.
 Analysis shows that male and female churn rates are very similar.
 
 **Actions:**
-Avoid gender-based retention strategies.
-Allocate resources to stronger churn predictors such as:
-Age
-Product ownership
-Geography
-Customer value
-Expected Outcome:
+- Avoid gender-based retention strategies.
+- Allocate resources to stronger churn predictors such as:
+  - Age
+  - Product ownership
+  - Geography
+  - Customer value
+
+**Expected Outcome:**
 
 More effective use of retention budgets.
 
